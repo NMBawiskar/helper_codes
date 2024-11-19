@@ -1,0 +1,2 @@
+prog_name,log_dir_path,days_to_keep_logs
+test,G:\Trimity3DTech\Log_cleaner\logs,1
