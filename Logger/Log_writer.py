@@ -68,7 +68,7 @@ class LogPrinter:
         os.makedirs(self.logDirPath, exist_ok=True)
 
         if self.toLogErrorSeperately:
-            self.error_log_dir = os.path.join(self.logDirPath, "errors")
+            
             os.makedirs(self.error_log_dir, exist_ok=True)
 
 
@@ -190,7 +190,7 @@ class LogPrinter:
             timeNowToParse = timeNowIST
 
 
-        dtStr = timeNowToParse.strftime("%Y-%m-%Y")
+        dtStr = timeNowToParse.strftime("%Y-%m-%d")
         timeStr = timeNowToParse.strftime("%H:%M:%S")
 
         return [dtStr, timeStr]

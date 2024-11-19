@@ -1,2 +1,9 @@
 prog_name,log_dir_path,days_to_keep_logs
-test,G:\Trimity3DTech\Log_cleaner\logs,1
+api,/mnt/my_sdcard/mahindra_press_bed_backend/logs/logs_main/logs,30
+api,/mnt/my_sdcard/mahindra_press_bed_backend/logs/logs_main/errors,30
+camera,/mnt/my_sdcard/mahindra_press_bed_backend/logs/logs_main_camera/logs,30
+camera,/mnt/my_sdcard/mahindra_press_bed_backend/logs/logs_main_camera/errors,30
+plc,/mnt/my_sdcard/mahindra_press_bed_backend/logs/logs_plc_communication/logs,30
+plc,/mnt/my_sdcard/mahindra_press_bed_backend/logs/logs_plc_communication/errors,30
+no_part_configured,/mnt/my_sdcard/mahindra_press_bed_backend/logs/logs_no_part_configured/logs,30
+no_part_configured,/mnt/my_sdcard/mahindra_press_bed_backend/logs/logs_no_part_configured/errors,30
