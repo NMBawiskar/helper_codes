@@ -12,10 +12,12 @@
     - Take inference and save annotated images 
     - Create annotations xmls and yolo txt files from inference
 
-4. Logger 
+4. Yolo_training
+    - All required files and yaml for training YoloV11 (when this was created)
+
+5. Logger 
     - Save log date wise
     - Purge old log files
-5. S3
+6. S3
     - S3 list files, list sub directories
     - upload download single file or directory to s3 using boto3
-    
