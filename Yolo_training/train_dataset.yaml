@@ -1,0 +1,9 @@
+path:  /content/train_dataset_small # dataset root dir
+train: /content/train_dataset_small/train/images #images/train # train images (relative to 'path') 4 images
+val: /content/train_dataset_small/val/images # val images (relative to 'path') 4 images
+test: # test images (optional)
+
+# Classes
+names:
+  0: pins
+  
