@@ -1,8 +1,8 @@
-# YOLO Helper codes#
+# YOLO Helper codes
 
 Here it can be useful to 
-    - get inference
-    - For annotation helper refer directory ../AnnotationHelper
+- get inference
+- For annotation helper refer directory ../AnnotationHelper
 
 
 ## How to use:
