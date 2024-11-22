@@ -83,7 +83,8 @@ class Annotation_converter:
 
 
 if __name__=="__main__":
-    path_dir = r"F:\Quicsolv\TRAININGS\ObjectDetection\Mahindra_press_bed_pin_detection\pins_near_to_camera_dataset\pins_near_to_camera_dataset\labels_xml"
+    path_dir = r"F:\RuRux\mahindra_press_bed_backend\data_annotated\right\annotations"
+    yolo_annotation_dir = r"F:\RuRux\mahindra_press_bed_backend\data_annotated\right\annotations_yolo"
     annotation_converter  = Annotation_converter(path_dir)
     # file_path_xml = os.path.join(path_dir, '27_10_2023__12_30_21.xml')
     # list_yolo_annotation = annotation_converter.convert_xml_file_to_yolo_annotation(file_path_xml)
@@ -93,4 +94,4 @@ if __name__=="__main__":
     # with open(out_path,'w') as f:
     #     f.writelines(list_yolo_annotation_str)
 
-    annotation_converter.convert_dir_xml_to_yolo(out_dir_path="output_yolo_annotations")
+    annotation_converter.convert_dir_xml_to_yolo(out_dir_path=yolo_annotation_dir)

@@ -76,8 +76,9 @@ class YoloAnnotationValidator:
         print(f"Filenames in which undersized object found {len(files_violating_validation)}")
 
 
+
 if __name__=="__main__":
-    dir_yolo_annotations=r'F:\Quicsolv\TRAININGS\ObjectDetection\Mahindra_press_bed_pin_detection\latest_pins_dataset_new\content\pins_dataset\train\labels'
+    dir_yolo_annotations=r'F:\RuRux\mahindra_press_bed_backend\data_annotated\right\annotations_yolo'
     # dir_yolo_annotations=r'output_yolo_annotations'
     yoloAnnotationValidator = YoloAnnotationValidator(dir_yolo_annotations)
 
@@ -86,4 +87,4 @@ if __name__=="__main__":
 
     yoloAnnotationValidator.validate_number_of_labels(required_label_count=label_count_required)
 
-    yoloAnnotationValidator.validate_minimum_height_width_of_object(imgSize_for_training=(960,960), min_pix_ht_or_wd=4)
+    yoloAnnotationValidator.validate_minimum_height_width_of_object(imgSize_for_training=(640,640), min_pix_ht_or_wd=4)

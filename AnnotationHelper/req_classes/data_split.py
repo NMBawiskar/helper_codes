@@ -19,8 +19,14 @@ class DataSplitter:
 
         imageFiles= os.listdir(self.imgFolder)
         annotations = os.listdir(self.annotation_label_folder)
+
+        
         files_training = int(train_percent* len(annotations)/100)
-        random_training_files = random.choices(annotations, k=files_training)
+        random_training_files = random.sample(annotations, files_training)
+
+        print("Training files seleted :", len(random_training_files))
+        print("Unique Training files seleted :", len(set(random_training_files)))
+
 
         train_img_dir = os.path.join(train_dir_path, 'images')
         val_img_dir = os.path.join(val_dir_path, 'images')
@@ -31,7 +37,7 @@ class DataSplitter:
         os.makedirs(val_img_dir, exist_ok=True)
         os.makedirs(train_labels_dir, exist_ok=True)
         os.makedirs(val_labels_dir, exist_ok=True)
-
+        
         for annotationFile in annotations:
             fileNameWoExt = annotationFile.split(".")[0]
             fileNameImg = f"{fileNameWoExt}.png"
@@ -53,14 +59,14 @@ class DataSplitter:
                     os.rename(sourceLabelPath, targetLabelPath)
 
         
-
+        
 
         print(train_dir_path)
 
 
 
 if __name__=="__main__":
-    imgDirPath = r"F:\Quicsolv\TRAININGS\ObjectDetection\Mahindra_press_bed_pin_detection\pins_near_to_camera_dataset\pins_near_to_camera_dataset\images"
-    label_dir_path = r"F:\Quicsolv\TRAININGS\ObjectDetection\Mahindra_press_bed_pin_detection\pins_near_to_camera_dataset\pins_near_to_camera_dataset\output_yolo_annotations" 
+    imgDirPath = r"F:\RuRux\mahindra_press_bed_backend\data_annotated\left\imgs"
+    label_dir_path = r"F:\RuRux\mahindra_press_bed_backend\data_annotated\left\annotations_yolo" 
     dataSplitter = DataSplitter(imgDirPath, label_dir_path)
     dataSplitter.split_data_random()
